@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ktds.devpro.batch.job.sample.db2db.mapper.TmpUserMapper">
+
+	<select id="selectTmpUserList" resultType="com.ktds.devpro.batch.job.sample.db2db.domain.TmpUserVo">
+		SELECT * FROM 
+		  ( SELECT
+		  	USER_ID
+		  	, USER_NAME
+		  	, PASSWORD
+		  	, CREATE_DATE
+		  	, ROW_NUMBER() OVER() AS RNUM
+		  	FROM TMP_USER
+		  	ORDER BY USER_ID DESC
+		  )
+		WHERE RNUM BETWEEN #{_skiprows} + 1 AND #{_skiprows} + #{_pagesize}
+	</select>
+
+</mapper>

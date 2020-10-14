@@ -1,0 +1,60 @@
+DROP TABLE IF EXISTS AIRPORT_CODE;
+
+CREATE TABLE AIRPORT_CODE(
+	AIRPORT_CD VARCHAR(4) PRIMARY KEY
+	, AIRPORT_ENG_NM VARCHAR(70)
+	, AIRPORT_KOR_NM VARCHAR(70)
+	, CREATE_DATE TIMESTAMP
+);
+
+
+DROP TABLE IF EXISTS TMP_USER;
+
+CREATE TABLE TMP_USER(
+	USER_ID VARCHAR(50) PRIMARY KEY
+	, PASSWORD VARCHAR(50)
+	, USER_NAME VARCHAR(50)
+	, CREATE_DATE TIMESTAMP
+);
+
+
+DROP TABLE IF EXISTS SAMPLE_USER;
+
+CREATE TABLE SAMPLE_USER(
+	USER_ID VARCHAR(50) PRIMARY KEY
+	, PASSWORD VARCHAR(50)
+	, USER_NAME VARCHAR(50)
+	, CREATE_DATE TIMESTAMP
+);
+
+
+
+INSERT INTO TMP_USER VALUES('tester1', '12345', '이대형', sysdate);
+INSERT INTO TMP_USER VALUES('tester2', '12345', '하준호', sysdate);
+INSERT INTO TMP_USER VALUES('tester3', '12345', '유한준', sysdate);
+INSERT INTO TMP_USER VALUES('tester4', '12345', '모넬', sysdate);
+INSERT INTO TMP_USER VALUES('tester5', '12345', '박경수', sysdate);
+INSERT INTO TMP_USER VALUES('tester6', '12345', '이진영', sysdate);
+INSERT INTO TMP_USER VALUES('tester7', '12345', '이해창', sysdate);
+INSERT INTO TMP_USER VALUES('tester8', '12345', '박기혁', sysdate);
+INSERT INTO TMP_USER VALUES('tester9', '12345', '심우준', sysdate);
+INSERT INTO TMP_USER VALUES('tester10', '12345', '피어밴드', sysdate);
+INSERT INTO TMP_USER VALUES('tester11', '12345', '최원재', sysdate);
+INSERT INTO TMP_USER VALUES('tester12', '12345', '최대성', sysdate);
+INSERT INTO TMP_USER VALUES('tester13', '12345', '채선관', sysdate);
+INSERT INTO TMP_USER VALUES('tester14', '12345', '주권', sysdate);
+INSERT INTO TMP_USER VALUES('tester15', '12345', '조병욱', sysdate);
+INSERT INTO TMP_USER VALUES('tester16', '12345', '조무근', sysdate);
+INSERT INTO TMP_USER VALUES('tester17', '12345', '조근종', sysdate);
+INSERT INTO TMP_USER VALUES('tester18', '12345', '정성곤', sysdate);
+INSERT INTO TMP_USER VALUES('tester19', '12345', '정대현', sysdate);
+INSERT INTO TMP_USER VALUES('tester20', '12345', '장현우', sysdate);
+INSERT INTO TMP_USER VALUES('tester21', '12345', '장시환', sysdate);
+INSERT INTO TMP_USER VALUES('tester31', '12345', '나성범', sysdate);
+INSERT INTO TMP_USER VALUES('tester32', '12345', '손시헌', sysdate);
+INSERT INTO TMP_USER VALUES('tester33', '12345', '모창민', sysdate);
+INSERT INTO TMP_USER VALUES('tester34', '12345', '이원재', sysdate);
+INSERT INTO TMP_USER VALUES('tester41', '12345', '양의지', sysdate);
+INSERT INTO TMP_USER VALUES('tester42', '12345', '에반스', sysdate);
+INSERT INTO TMP_USER VALUES('tester43', '12345', '장원준', sysdate);
+INSERT INTO TMP_USER VALUES('tester44', '12345', '니퍼트', sysdate);

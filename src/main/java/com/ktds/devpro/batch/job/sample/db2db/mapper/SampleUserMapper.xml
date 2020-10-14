@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ktds.devpro.batch.job.sample.db2db.mapper.SampleUserMapper">
+
+	<insert id="insertSampleUser" parameterType="com.ktds.devpro.batch.job.sample.db2db.domain.SampleUserBo">
+		INSERT INTO SAMPLE_USER (
+			USER_ID
+			, USER_NAME
+			, PASSWORD
+			, CREATE_DATE 
+		)
+		VALUES (
+			#{userId}
+			, #{userName}
+			, #{password}
+			, sysdate()
+		)
+	</insert>
+	
+</mapper>

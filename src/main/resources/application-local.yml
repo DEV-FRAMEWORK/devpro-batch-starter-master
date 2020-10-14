@@ -1,0 +1,32 @@
+# Spring 환경 설정
+spring:
+
+# DataSource 설정
+  datasource:
+    h2:
+      platform: h2
+      driverClassName: org.h2.Driver
+      url: jdbc:h2:~/test;AUTO_SERVER=TRUE
+      username: sa
+      password:
+    hsql:
+      platform: hsql
+      driverClassName: org.hsqldb.jdbc.JDBCDriver
+      url: jdbc:hsqldb:file:~/hsqltest;encoding=UTF-8
+      username: sa
+      password:
+  
+  # batch 설정
+  batch:
+    job:
+      enabled: false
+
+devpro:  
+  batch:
+    pool: 
+      maxSize: 8  #Batch 코어 수에 맞춰 설정할 것 (대략 core x 4 정도로 해보고, 대량 병렬 작업 시 CPU 사용률을 보면서 조정해야 함)
+
+# Log4j2 기본 설정
+logging:
+  config: classpath:log4j2-local.xml
+  level: debug

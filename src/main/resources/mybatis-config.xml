@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<!-- Logger 설정 -->
+        <setting name="logImpl" value="SLF4J" />
+
+		<!-- Mybatis 캐시는 사용하지 않음 (서비스 영역에서 사용) -->
+		<setting name="cacheEnabled" value="false" />
+    
+		<!-- Prepared Statement 를 재사용 -->
+		<setting name="defaultExecutorType" value="REUSE" />
+    
+		<!-- Multiple Result-set 설정(허용하지 않음). 허용이 꼭 필요한 경우 true 로 변경 -->
+		<setting name="multipleResultSetsEnabled" value="false" />
+    
+		 <!-- 필드와 프로퍼티간 자동 매핑
+		  Partial: nested result mapping 은 지원하지 않음. 단일 테이블에 대해서 지원
+		 -->
+		<setting name="autoMappingBehavior" value="PARTIAL" />
+		
+		<!-- Table: ABC_DEF -> Vo: abcDef 로 매핑  -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+        
+		<!-- Null Parameter 처리 -->
+		<setting name="jdbcTypeForNull" value="NULL" />
+	</settings>
+
+</configuration>

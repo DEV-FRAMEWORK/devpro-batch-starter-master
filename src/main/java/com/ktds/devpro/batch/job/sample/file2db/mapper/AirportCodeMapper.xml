@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ktds.devpro.batch.job.sample.file2db.mapper.AirportCodeMapper">
+
+	<insert id="insertAirportCode" parameterType="com.ktds.devpro.batch.job.sample.file2db.domain.AirportCodeBo">
+		INSERT INTO AIRPORT_CODE (
+			AIRPORT_CD
+			, AIRPORT_ENG_NM
+			, AIRPORT_KOR_NM
+			, CREATE_DATE 
+		)
+		VALUES (
+			#{airportCd}
+			, #{airportEngNm}
+			, #{airportKorNm}
+			, sysdate()
+		)
+	</insert>
+
+</mapper>
